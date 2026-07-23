@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--color2-);
+}
+
+body {
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+:root {
+    --color1- : #0D0D0D;
+    --color2- : #2B2B2B;
+    --color3- : #D4AF37;
+    --color4- : #F5E9DA;
+    --color5- : #FAF7F2;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+main {
+    background-color: var(--color2-);
+    width: 100%;
+    height: auto;
+}
+
+section {
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    min-height: 75vh;
+}
+
+h1 {
+    color: var(--color3-);
+    font-size: 3rem;
+}
+
+/*Header*/
+
+#head {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color4-);
+}
+
+#head button {
+    border: none;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    background-color: var(--color3-);
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*Section 1*/
+
+#section1 {
+    width: 100%;
+    height: 75vh;
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+#section1 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid purple;
+    height: 35vh;
+    width: 22rem;
+    text-align: center;
+    position: relative;
+    top: 7rem;
+    left: 5rem;
+    background-color: var(--color2-);
+}
+
+#section1 button {
+    border: .2rem solid var(--color1-);
+    background-color: var(--color3-);
+    height: 4rem;
+    width: 14rem;
+}
+
+#section1 button a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--color1-);
+}
+
+#section1 p {
+    color: var(--color5-);
+    font-size: 2rem;
+}
+
+/*section2*/
+
+#section2 {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#section2 h1 {
+    color: var(--color3-);
+}
+
+#section2 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#section2 article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#section2 article figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    width: 33.33%;
+}
+
+#section2 article figure p {
+    color: var(--color5-);
+    text-align: justify;
+}
+
+#section2 article figure h2 {
+    color: var(--color4-);
+    font-weight: bold;
+}
+
+/*Navbar*/
+
+nav {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+}
+
+nav.active {
+    display: flex;
+}
+
+nav #navInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: column;
+    width: min(80vw, 20rem);
+    background-color: var(--color2-);
+    height: 100%;
+    gap: 1rem;
+    padding: 3rem 1rem 1rem;
+    z-index: 1;
+}
+
+nav #navOverlay {
+    flex: 1;
+    height: 100%;
+    background-color: rgba(13, 13, 13, 0.75);
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color3-);
+    border: .2rem solid var(--color1-);
+    width: 100%;
+    text-decoration: none;
+    color: var(--color1-);
+    height: 2.7rem;
+    border-radius: .3rem;
+}
+
+
+
+/*Responsive*/
+
+/*Celulares*/
+@media screen and (max-width: 768px) {
+    #head {
+        height: auto;
+        min-height: 20vh;
+        width: 100%;
+        margin: 0;
+        padding: 1rem 1rem 1.2rem;
+        box-sizing: border-box;
+        justify-content: flex-start;
+    }
+
+    #head img {
+        width: min(14rem, 70vw);
+    }
+
+    #head button {
+        top: 1rem;
+        right: 1rem;
+        width: 2.6rem;
+        height: 2.6rem;
+        font-size: 1rem;
+    }
+
+    #section1 {
+        height: auto;
+        min-height: 70vh;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+        background-color: var(--color2-);
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+
+    #section1 div {
+        width: min(90%, 20rem);
+        height: auto;
+        top: 0;
+        left: 0;
+        padding: 1.5rem;
+        margin: 0 auto;
+    }
+
+    #section1 h1 {
+        font-size: 2rem;
+    }
+
+    #section1 p {
+        font-size: 1.2rem;
+    }
+
+    #section2 {
+        height: auto;
+        padding: 2rem 1rem;
+        background-color: var(--color2-);
+    }
+
+    #section2 article {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #section2 article figure {
+        width: 100%;
+        padding: 0 0.25rem;
+    }
+
+    nav #navInfo {
+        width: min(85vw, 20rem);
+    }
+}
+
+/*Tablets*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #section1 div {
+        width: 20rem;
+        left: 2rem;
+        top: 4rem;
+    }
+
+    #section2 article {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    #section2 article figure {
+        width: calc(50% - 0.5rem);
+        padding: 0 0.5rem;
+    }
+
+    nav #navInfo {
+        width: 40vw;
+        max-width: 18rem;
+    }
+}
+
